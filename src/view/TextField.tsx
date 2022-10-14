@@ -6,7 +6,7 @@ interface TextFieldProps {
     emptyText?: string,
 }
 
-const TextField = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
+const TextFieldView = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
     <input
         type="text"
         placeholder={emptyText}
@@ -15,4 +15,4 @@ const TextField = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
         autoFocus
     />
 
-export default TextField;
+export default TextFieldView;

@@ -1,19 +1,20 @@
 import React from 'react';
-import TextField from '../TextField';
+import TextFieldView from '../TextField';
 
 interface FilterFieldProps {
     data: string[],
     callback: (filteredData: string[]) => void,
+    emptyText?: string,
 }
 
-const FilterField = ({ data, callback }: FilterFieldProps): JSX.Element => {
+const FilterFieldView = ({ data, callback, emptyText = 'Filter' }: FilterFieldProps): JSX.Element => {
     const handler = (event: React.KeyboardEvent): void => {
         const value = (event.target as HTMLInputElement).value.toLowerCase();
 
         callback(data.filter(item => item.toLowerCase().includes(value)));
     };
 
-    return <TextField handler={handler}></TextField>;
+    return <TextFieldView handler={handler} emptyText={emptyText} />;
 }
 
-export default FilterField;
+export default FilterFieldView;
