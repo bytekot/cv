@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "docs",
+        "target": "es5",
+        "jsx": "react",
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

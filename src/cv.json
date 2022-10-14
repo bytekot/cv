@@ -1,0 +1,30 @@
+{
+    "basic": {
+        "name": "Sergey",
+        "surname": "Kot",
+        "role": "UI/UX Developer",
+        "email": "bytekot@gmail.com",
+        "country": "Russia",
+        "city": "Sevastopol"
+    },
+
+    "skills": {
+        "language": [
+            "JavaScript",
+            "TypeScript"
+        ],
+        "library": [
+            "React",
+            "ExtJS"
+        ],
+        "styling": [
+            "CSS Modules",
+            "SCSS"
+        ],
+        "tool": [
+            "Webpack",
+            "ESBuild",
+            "Jest"
+        ]
+    }
+}
