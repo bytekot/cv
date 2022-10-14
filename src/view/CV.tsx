@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import TextFieldView from './TextField';
+import FilterField from './FilterField/FilterField';
 import TagListView from './TagList';
-import { filterSkillList } from '../utils';
 
 interface CVData {
     data: {
@@ -22,9 +21,6 @@ const CVView = ({ data }: CVData): JSX.Element => {
     const skillList = data.skills;
     const [skills, setSkills] = useState(skillList);
 
-    const filterHandler = (event: React.KeyboardEvent): void =>
-        setSkills(filterSkillList(skillList, (event.target as HTMLInputElement).value.toLowerCase()))
-
     return (
         <section>
             <article>
@@ -38,7 +34,7 @@ const CVView = ({ data }: CVData): JSX.Element => {
 
             <article>
                 <header>Skills</header>
-                <TextFieldView handler={filterHandler} emptyText="Filter skills" />
+                <FilterField data={skillList} callback={setSkills} />
                 <TagListView tags={skills} />
             </article>
         </section>
