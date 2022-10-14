@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import TextFieldView from './TextField';
 import TagListView from './TagList';
-import { filterSkillList, Skill } from '../utils';
+import { filterSkillList } from '../utils';
 
-interface CVProps {
+interface CVData {
     data: {
         basic: {
             name: string,
@@ -13,11 +13,11 @@ interface CVProps {
             country: string,
             city: string,
         },
-        skills: Skill[],
+        skills: string[],
     },
 }
 
-const CVView = ({ data }: CVProps): JSX.Element => {
+const CVView = ({ data }: CVData): JSX.Element => {
     const basics = data.basic;
     const skillList = data.skills;
     const [skills, setSkills] = useState(skillList);

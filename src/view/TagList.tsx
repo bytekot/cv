@@ -3,19 +3,12 @@ import { CSS_PREFIX } from '../constants';
 import TagView from './Tag';
 
 interface TagListProps {
-    tags: {
-        text: string,
-        cls?: string,
-    }[]
+    tags: string[]
 }
 
 const TagListView = ({ tags }: TagListProps): JSX.Element =>
     <ul className={`${CSS_PREFIX}taglist`}>
-        {tags.map(tag =>
-            <TagView key={tag.text} additionalCls={`${CSS_PREFIX}${tag.cls}`}>
-                {tag.text}
-            </TagView>
-        )}
+        {tags.map(tag => <TagView key={tag}>{tag}</TagView>)}
     </ul>
 
 export default TagListView;

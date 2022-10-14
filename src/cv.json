@@ -8,23 +8,15 @@
         "city": "Sevastopol"
     },
 
-    "skills": {
-        "language": [
-            "JavaScript",
-            "TypeScript"
-        ],
-        "library": [
-            "React",
-            "ExtJS"
-        ],
-        "styling": [
-            "CSS Modules",
-            "SCSS"
-        ],
-        "tool": [
-            "Webpack",
-            "ESBuild",
-            "Jest"
-        ]
-    }
+    "skills": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "ExtJS",
+        "CSS Modules",
+        "SCSS",
+        "Webpack",
+        "ESBuild",
+        "Jest"
+    ]
 }
