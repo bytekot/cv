@@ -2,7 +2,7 @@
     "basicInfo": {
         "name": "Sergey",
         "surname": "Kot",
-        "role": "UI/UX Developer",
+        "title": "UI/UX Developer",
         "email": "bytekot@gmail.com",
         "country": "Russia",
         "city": "Sevastopol"
@@ -13,10 +13,41 @@
         "TypeScript",
         "React",
         "ExtJS",
+        "UI/UX Design",
         "CSS Modules",
         "SCSS",
         "Webpack",
         "ESBuild",
-        "Jest"
+        "Jest",
+        "Figma",
+        "Framer",
+        "Git",
+        "Docker",
+        "Agile",
+        "Kanban"
+    ],
+
+    "jobs": [
+        {
+            "company": "Criterion Inc.",
+            "title": "Frontend Developer",
+            "startDate": "03.2021",
+            "endDate": "03.2022",
+            "description": "- Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support). - Participation in the development of a new product design."
+        },
+        {
+            "company": "Criterion Inc.",
+            "title": "Frontend Developer",
+            "startDate": "03.2021",
+            "endDate": "03.2022",
+            "description": "- Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support). - Participation in the development of a new product design."
+        },
+        {
+            "company": "Criterion Inc.",
+            "title": "Frontend Developer",
+            "startDate": "03.2021",
+            "endDate": "03.2022",
+            "description": "- Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support). - Participation in the development of a new product design."
+        }
     ]
 }

@@ -11,12 +11,19 @@ body {
 }
 
 section {
-    padding: 30px;
-    max-width: 500px;
+    display: grid;
+    grid-template-columns: 170px 1fr 0.5fr;
+    //grid-template-rows: 0.7fr 0.5fr 1.8fr;
+    grid-template-areas:
+        "basic-info jobs skills"
+        "contacts jobs skills"
+        ". jobs education";
+    gap: 10px;
+
+    padding: 30px 120px;
 
     article {
         padding: 20px;
-        margin-bottom: 10px;
         background: #fff;
         border: 1px solid #e0e0e0;
         border-radius: 4px;
@@ -30,6 +37,32 @@ section {
 
         address {
             opacity: 0.6;
+        }
+
+        &.#{$PREFIX}basic-info {
+            grid-area: basic-info;
+
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 100px;
+            }
+        }
+
+        &.#{$PREFIX}contacts {
+            grid-area: contacts;
+        }
+
+        &.#{$PREFIX}skills {
+            grid-area: skills;
+        }
+
+        &.#{$PREFIX}jobs {
+            grid-area: jobs;
+        }
+
+        &.#{$PREFIX}education {
+            grid-area: education;
         }
     }
 }
@@ -62,20 +95,4 @@ section {
     .#{$PREFIX}tag {
         margin: 6px 6px 0 0;
     }
-}
-
-.#{$PREFIX}skill-language {
-    background-color:#b39ddb;
-}
-
-.#{$PREFIX}skill-library {
-    background-color: #80cbc4;
-}
-
-.#{$PREFIX}skill-styling {
-    background-color:#ffab91;
-}
-
-.#{$PREFIX}skill-tool {
-    background-color:#fff59d;
 }

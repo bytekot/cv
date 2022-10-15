@@ -12,7 +12,7 @@ const TextFieldView = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
         placeholder={emptyText}
         className={`${CSS_PREFIX}input`}
         onKeyUp={handler}
-        autoFocus
+        // autoFocus
     />
 
 export default TextFieldView;
