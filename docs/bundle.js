@@ -260,6 +260,72 @@ eval("(function (global, factory) {\n\t true ? module.exports = factory() :\n\t0
 
 /***/ }),
 
+/***/ "./src/components/Application.tsx":
+/*!****************************************!*\
+  !*** ./src/components/Application.tsx ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar CV_1 = __importDefault(__webpack_require__(/*! ./CV */ \"./src/components/CV.tsx\"));\nvar cv_json_1 = __webpack_require__(/*! ../cv.json */ \"./src/cv.json\");\nvar ApplicationView = function () {\n    return react_1.default.createElement(CV_1.default, { general: cv_json_1.general, skills: cv_json_1.skills, jobs: cv_json_1.jobs, education: cv_json_1.education });\n};\nexports[\"default\"] = ApplicationView;\n\n\n//# sourceURL=webpack://carl/./src/components/Application.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/CV.tsx":
+/*!*******************************!*\
+  !*** ./src/components/CV.tsx ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    var desc = Object.getOwnPropertyDescriptor(m, k);\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\n      desc = { enumerable: true, get: function() { return m[k]; } };\n    }\n    Object.defineProperty(o, k2, desc);\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar FilterField_1 = __importDefault(__webpack_require__(/*! ./FilterField */ \"./src/components/FilterField.tsx\"));\nvar TagList_1 = __importDefault(__webpack_require__(/*! ./TagList */ \"./src/components/TagList.tsx\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar email_svg_1 = __importDefault(__webpack_require__(/*! ../icons/email.svg */ \"./src/icons/email.svg\"));\nvar telegram_svg_1 = __importDefault(__webpack_require__(/*! ../icons/telegram.svg */ \"./src/icons/telegram.svg\"));\nvar github_svg_1 = __importDefault(__webpack_require__(/*! ../icons/github.svg */ \"./src/icons/github.svg\"));\nvar download_svg_1 = __importDefault(__webpack_require__(/*! ../icons/download.svg */ \"./src/icons/download.svg\"));\nvar CVView = function (_a) {\n    var general = _a.general, skills = _a.skills, jobs = _a.jobs;\n    var name = general.name, surname = general.surname, title = general.title, email = general.email, country = general.country, city = general.city;\n    var _b = (0, react_1.useState)(skills), filteredSkills = _b[0], setSkills = _b[1];\n    return (react_1.default.createElement(\"section\", null,\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated \").concat(constants_1.CSS_PREFIX, \"general\") },\n            react_1.default.createElement(\"img\", { src: 'avatar.jpeg' }),\n            react_1.default.createElement(\"header\", null,\n                name,\n                \" \",\n                surname),\n            title,\n            react_1.default.createElement(\"address\", null,\n                react_1.default.createElement(\"a\", { href: 'mailto:' }, email),\n                react_1.default.createElement(\"br\", null),\n                city,\n                \", \",\n                country)),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"additional\") },\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(email_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(email_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Send me an email\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(telegram_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(telegram_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"or write to Telegram.\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(github_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(github_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Visit my GitHub.\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(download_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(download_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Download this CV.\")))),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"jobs\") },\n            react_1.default.createElement(\"header\", null, \"Jobs\"),\n            jobs.map(function (jobData) {\n                return react_1.default.createElement(\"div\", { key: jobData.company },\n                    react_1.default.createElement(\"strong\", null, jobData.company),\n                    react_1.default.createElement(\"br\", null),\n                    jobData.title,\n                    react_1.default.createElement(\"br\", null),\n                    jobData.startDate,\n                    \" \\u2014 \",\n                    jobData.endDate,\n                    react_1.default.createElement(\"p\", null, jobData.description));\n            })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"skills\") },\n            react_1.default.createElement(\"header\", null, \"Skills\"),\n            react_1.default.createElement(FilterField_1.default, { data: skills, callback: setSkills }),\n            react_1.default.createElement(TagList_1.default, { tags: filteredSkills })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"education\") },\n            react_1.default.createElement(\"header\", null, \"Education\"),\n            react_1.default.createElement(\"strong\", null, \"Sevastopol National Technical University\"),\n            react_1.default.createElement(\"br\", null),\n            \"Informatics and Computer Engineering\",\n            react_1.default.createElement(\"br\", null),\n            \"2012\")));\n};\nexports[\"default\"] = CVView;\n\n\n//# sourceURL=webpack://carl/./src/components/CV.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/FilterField.tsx":
+/*!****************************************!*\
+  !*** ./src/components/FilterField.tsx ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar TextField_1 = __importDefault(__webpack_require__(/*! ./TextField */ \"./src/components/TextField.tsx\"));\nvar FilterFieldView = function (_a) {\n    var data = _a.data, callback = _a.callback, _b = _a.emptyText, emptyText = _b === void 0 ? 'Filter' : _b;\n    var handler = function (event) {\n        var value = event.target.value.toLowerCase();\n        callback(data.filter(function (item) { return item.toLowerCase().includes(value); }));\n    };\n    return react_1.default.createElement(TextField_1.default, { handler: handler, emptyText: emptyText });\n};\nexports[\"default\"] = FilterFieldView;\n\n\n//# sourceURL=webpack://carl/./src/components/FilterField.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Tag.tsx":
+/*!********************************!*\
+  !*** ./src/components/Tag.tsx ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar TagView = function (_a) {\n    var additionalCls = _a.additionalCls, children = _a.children;\n    return react_1.default.createElement(\"li\", { className: \"\".concat(constants_1.CSS_PREFIX, \"tag \").concat(additionalCls) }, children);\n};\nexports[\"default\"] = TagView;\n\n\n//# sourceURL=webpack://carl/./src/components/Tag.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TagList.tsx":
+/*!************************************!*\
+  !*** ./src/components/TagList.tsx ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar Tag_1 = __importDefault(__webpack_require__(/*! ./Tag */ \"./src/components/Tag.tsx\"));\nvar TagListView = function (_a) {\n    var tags = _a.tags;\n    return react_1.default.createElement(\"ul\", { className: \"\".concat(constants_1.CSS_PREFIX, \"taglist\") }, tags.map(function (tag) { return react_1.default.createElement(Tag_1.default, { key: tag }, tag); }));\n};\nexports[\"default\"] = TagListView;\n\n\n//# sourceURL=webpack://carl/./src/components/TagList.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TextField.tsx":
+/*!**************************************!*\
+  !*** ./src/components/TextField.tsx ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar TextFieldView = function (_a) {\n    var handler = _a.handler, emptyText = _a.emptyText;\n    return react_1.default.createElement(\"input\", { type: \"text\", placeholder: emptyText, className: \"\".concat(constants_1.CSS_PREFIX, \"input\"), onKeyUp: handler });\n};\nexports[\"default\"] = TextFieldView;\n\n\n//# sourceURL=webpack://carl/./src/components/TextField.tsx?");
+
+/***/ }),
+
 /***/ "./src/constants.ts":
 /*!**************************!*\
   !*** ./src/constants.ts ***!
@@ -289,73 +355,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__we
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar Application_1 = __importDefault(__webpack_require__(/*! ./view/Application */ \"./src/view/Application.tsx\"));\nvar container = document.body.appendChild(document.createElement('main'));\n(0, client_1.createRoot)(container).render(react_1.default.createElement(Application_1.default, null));\n\n\n//# sourceURL=webpack://carl/./src/view.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/Application.tsx":
-/*!**********************************!*\
-  !*** ./src/view/Application.tsx ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar CV_1 = __importDefault(__webpack_require__(/*! ./CV */ \"./src/view/CV.tsx\"));\nvar cv_json_1 = __webpack_require__(/*! ../cv.json */ \"./src/cv.json\");\nvar ApplicationView = function () { return react_1.default.createElement(CV_1.default, { general: cv_json_1.general, skills: cv_json_1.skills, jobs: cv_json_1.jobs }); };\nexports[\"default\"] = ApplicationView;\n\n\n//# sourceURL=webpack://carl/./src/view/Application.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/CV.tsx":
-/*!*************************!*\
-  !*** ./src/view/CV.tsx ***!
-  \*************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    var desc = Object.getOwnPropertyDescriptor(m, k);\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\n      desc = { enumerable: true, get: function() { return m[k]; } };\n    }\n    Object.defineProperty(o, k2, desc);\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar FilterField_1 = __importDefault(__webpack_require__(/*! ./FilterField/FilterField */ \"./src/view/FilterField/FilterField.tsx\"));\nvar TagList_1 = __importDefault(__webpack_require__(/*! ./TagList */ \"./src/view/TagList.tsx\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar email_svg_1 = __importDefault(__webpack_require__(/*! ../icons/email.svg */ \"./src/icons/email.svg\"));\nvar telegram_svg_1 = __importDefault(__webpack_require__(/*! ../icons/telegram.svg */ \"./src/icons/telegram.svg\"));\nvar github_svg_1 = __importDefault(__webpack_require__(/*! ../icons/github.svg */ \"./src/icons/github.svg\"));\nvar download_svg_1 = __importDefault(__webpack_require__(/*! ../icons/download.svg */ \"./src/icons/download.svg\"));\nvar CVView = function (_a) {\n    var general = _a.general, skills = _a.skills, jobs = _a.jobs;\n    var name = general.name, surname = general.surname, title = general.title, email = general.email, country = general.country, city = general.city;\n    var _b = (0, react_1.useState)(skills), filteredSkills = _b[0], setSkills = _b[1];\n    return (react_1.default.createElement(\"section\", null,\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated \").concat(constants_1.CSS_PREFIX, \"general\") },\n            react_1.default.createElement(\"img\", { src: 'avatar.jpeg' }),\n            react_1.default.createElement(\"header\", null,\n                name,\n                \" \",\n                surname),\n            title,\n            react_1.default.createElement(\"address\", null,\n                react_1.default.createElement(\"a\", { href: 'mailto:' }, email),\n                react_1.default.createElement(\"br\", null),\n                city,\n                \", \",\n                country)),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"additional\") },\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(email_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(email_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Send me an email\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(telegram_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(telegram_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"or write to Telegram.\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(github_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(github_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Visit my GitHub.\"))),\n            react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card-elevated\") },\n                react_1.default.createElement(\"a\", { href: '' },\n                    react_1.default.createElement(\"svg\", { viewBox: \"\".concat(download_svg_1.default.viewBox) },\n                        react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(download_svg_1.default.id) })),\n                    react_1.default.createElement(\"span\", null, \"Download this CV.\")))),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"jobs\") },\n            react_1.default.createElement(\"header\", null, \"Jobs\"),\n            jobs.map(function (jobData) {\n                return react_1.default.createElement(\"div\", { key: jobData.company },\n                    react_1.default.createElement(\"strong\", null, jobData.company),\n                    react_1.default.createElement(\"br\", null),\n                    jobData.title,\n                    react_1.default.createElement(\"br\", null),\n                    jobData.startDate,\n                    \" \\u2014 \",\n                    jobData.endDate,\n                    react_1.default.createElement(\"p\", null, jobData.description));\n            })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"skills\") },\n            react_1.default.createElement(\"header\", null, \"Skills\"),\n            react_1.default.createElement(FilterField_1.default, { data: skills, callback: setSkills }),\n            react_1.default.createElement(TagList_1.default, { tags: filteredSkills })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"education\") },\n            react_1.default.createElement(\"header\", null, \"Education\"),\n            react_1.default.createElement(\"strong\", null, \"Sevastopol National Technical University\"),\n            react_1.default.createElement(\"br\", null),\n            \"Informatics and Computer Engineering\",\n            react_1.default.createElement(\"br\", null),\n            \"2012\")));\n};\nexports[\"default\"] = CVView;\n\n\n//# sourceURL=webpack://carl/./src/view/CV.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/FilterField/FilterField.tsx":
-/*!**********************************************!*\
-  !*** ./src/view/FilterField/FilterField.tsx ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar TextField_1 = __importDefault(__webpack_require__(/*! ../TextField */ \"./src/view/TextField.tsx\"));\nvar FilterFieldView = function (_a) {\n    var data = _a.data, callback = _a.callback, _b = _a.emptyText, emptyText = _b === void 0 ? 'Filter' : _b;\n    var handler = function (event) {\n        var value = event.target.value.toLowerCase();\n        callback(data.filter(function (item) { return item.toLowerCase().includes(value); }));\n    };\n    return react_1.default.createElement(TextField_1.default, { handler: handler, emptyText: emptyText });\n};\nexports[\"default\"] = FilterFieldView;\n\n\n//# sourceURL=webpack://carl/./src/view/FilterField/FilterField.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/Tag.tsx":
-/*!**************************!*\
-  !*** ./src/view/Tag.tsx ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar TagView = function (_a) {\n    var additionalCls = _a.additionalCls, children = _a.children;\n    return react_1.default.createElement(\"li\", { className: \"\".concat(constants_1.CSS_PREFIX, \"tag \").concat(additionalCls) }, children);\n};\nexports[\"default\"] = TagView;\n\n\n//# sourceURL=webpack://carl/./src/view/Tag.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/TagList.tsx":
-/*!******************************!*\
-  !*** ./src/view/TagList.tsx ***!
-  \******************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar Tag_1 = __importDefault(__webpack_require__(/*! ./Tag */ \"./src/view/Tag.tsx\"));\nvar TagListView = function (_a) {\n    var tags = _a.tags;\n    return react_1.default.createElement(\"ul\", { className: \"\".concat(constants_1.CSS_PREFIX, \"taglist\") }, tags.map(function (tag) { return react_1.default.createElement(Tag_1.default, { key: tag }, tag); }));\n};\nexports[\"default\"] = TagListView;\n\n\n//# sourceURL=webpack://carl/./src/view/TagList.tsx?");
-
-/***/ }),
-
-/***/ "./src/view/TextField.tsx":
-/*!********************************!*\
-  !*** ./src/view/TextField.tsx ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar TextFieldView = function (_a) {\n    var handler = _a.handler, emptyText = _a.emptyText;\n    return react_1.default.createElement(\"input\", { type: \"text\", placeholder: emptyText, className: \"\".concat(constants_1.CSS_PREFIX, \"input\"), onKeyUp: handler });\n};\nexports[\"default\"] = TextFieldView;\n\n\n//# sourceURL=webpack://carl/./src/view/TextField.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar Application_1 = __importDefault(__webpack_require__(/*! ./components/Application */ \"./src/components/Application.tsx\"));\nvar container = document.body.appendChild(document.createElement('main'));\n(0, client_1.createRoot)(container).render(react_1.default.createElement(Application_1.default, null));\n\n\n//# sourceURL=webpack://carl/./src/view.tsx?");
 
 /***/ }),
 

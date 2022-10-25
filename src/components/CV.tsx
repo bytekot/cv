@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FilterFieldView from './FilterField/FilterField';
+import FilterFieldView from './FilterField';
 import TagListView from './TagList';
 import { CSS_PREFIX } from '../constants';
 import emailIcon from '../icons/email.svg';
@@ -27,13 +27,13 @@ interface CVData {
         description: string,
     }[],
 
-    // education: {
-    //     university: string,
-    //     specialization: string,
-    //     startDate: string,
-    //     endDate: string,
-    //     degree: string,
-    // },
+    education: {
+        university: string,
+        specialization: string,
+        startDate: string,
+        endDate: string,
+        degree: string,
+    },
 }
 
 const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {

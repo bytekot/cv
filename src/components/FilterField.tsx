@@ -1,5 +1,5 @@
 import React from 'react';
-import TextFieldView from '../TextField';
+import TextFieldView from './TextField';
 
 interface FilterFieldProps {
     data: string[],
