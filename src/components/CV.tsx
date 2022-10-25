@@ -55,9 +55,9 @@ const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {
 
             <article className={`${CSS_PREFIX}additional`}>
                 <MenuItem text='Send me an email' icon={emailIcon}/>
-                <MenuItem text='or write to Telegram.' icon={telegramIcon} />
-                <MenuItem text='Visit my GitHub.' icon={gitHubIcon} />
-                <MenuItem text='Download this CV.' icon={downloadIcon} />
+                <MenuItem text='or write to Telegram.' icon={telegramIcon}/>
+                <MenuItem text='Visit my GitHub.' icon={gitHubIcon}/>
+                <MenuItem text='Download this CV.' icon={downloadIcon}/>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
