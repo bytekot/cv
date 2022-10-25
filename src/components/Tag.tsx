@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { CSS_PREFIX } from '../constants';
 
 interface TagProps {

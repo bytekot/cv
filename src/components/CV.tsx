@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuItem from './MenuItem';
 import FilterFieldView from './FilterField';
 import TagListView from './TagList';
 import { CSS_PREFIX } from '../constants';
@@ -53,38 +54,10 @@ const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {
             </article>
 
             <article className={`${CSS_PREFIX}additional`}>
-                <div className={`${CSS_PREFIX}card-elevated`} >
-                    <a href=''>
-                        <svg viewBox={`${emailIcon.viewBox}`}>
-                            <use xlinkHref={`#${emailIcon.id}`} />
-                        </svg>
-                        <span>Send me an email</span>
-                    </a>
-                </div>
-                <div className={`${CSS_PREFIX}card-elevated`}>
-                    <a href=''>
-                        <svg viewBox={`${telegramIcon.viewBox}`}>
-                            <use xlinkHref={`#${telegramIcon.id}`} />
-                        </svg>
-                        <span>or write to Telegram.</span>
-                    </a>
-                </div>
-                <div className={`${CSS_PREFIX}card-elevated`} >
-                    <a href=''>
-                        <svg viewBox={`${gitHubIcon.viewBox}`}>
-                            <use xlinkHref={`#${gitHubIcon.id}`} />
-                        </svg>
-                        <span>Visit my GitHub.</span>
-                    </a>
-                </div>
-                <div className={`${CSS_PREFIX}card-elevated`}>
-                    <a href=''>
-                        <svg viewBox={`${downloadIcon.viewBox}`}>
-                            <use xlinkHref={`#${downloadIcon.id}`} />
-                        </svg>
-                        <span>Download this CV.</span>
-                    </a>
-                </div>
+                <MenuItem text='Send me an email' icon={emailIcon}/>
+                <MenuItem text='or write to Telegram.' icon={telegramIcon} />
+                <MenuItem text='Visit my GitHub.' icon={gitHubIcon} />
+                <MenuItem text='Download this CV.' icon={downloadIcon} />
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
