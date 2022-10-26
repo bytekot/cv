@@ -1,11 +1,15 @@
-$prefix: 'carl-';
+$prefix: 'cv-';
 
+$color-0: #fff;
+$color-1: #fafafa;
+$color-2: #eceff1;
+$color-3: #e0e0e0;
 $color-link: #2286c3;
 
 body {
-    background: #fafafa;
-    font-family: Roboto, sans-serif;
+    background: $color-1;
 
+    font-family: Roboto, sans-serif;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -60,30 +64,27 @@ section {
 
 .#{$prefix}card {
     padding: 20px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
+    background: $color-0;
+    border: 1px solid $color-3;
     border-radius: 4px;
 }
 
 .#{$prefix}general {
     padding: 0 20px;
 
-    img {
+    .#{$prefix}avatar {
         height: 100px;
         width: 100px;
-        border: 2px solid #fafafa;
         border-radius: 100px;
     }
 }
 
 .#{$prefix}menu-item {
     padding: 5px 20px;
-
     margin-bottom: 10px;
-
     cursor: pointer;
 
-    svg {
+    .#{$prefix}icon {
         height: 25px;
         width: 25px;
         vertical-align: middle;
@@ -97,15 +98,8 @@ section {
             margin-left: 15px;
             vertical-align: middle;
             color: $color-link;
-
-            border-radius: 1px solid #e0e0e0;
-
             border-bottom: 1px solid $color-link;
         }
-    }
-
-    &:hover {
-        background-color: #eceff1;
     }
 }
 
@@ -120,11 +114,9 @@ section {
 
 .#{$prefix}tag {
     display: inline-block;
-
     padding: 2px 6px;
-
-    background-color: #eceff1;
-    border: 1px solid #e0e0e0;
+    background-color: $color-2;
+    border: 1px solid $color-3;
     border-radius: 2px;
     cursor: default;
     text-align: center;

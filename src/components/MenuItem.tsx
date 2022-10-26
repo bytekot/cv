@@ -10,10 +10,10 @@ interface MenuItem {
 }
 
 const MenuItem = ({ text, icon }: MenuItem): JSX.Element =>
-    <div className={`${CSS_PREFIX}menu-item`} >
+    <div className={`${CSS_PREFIX}menu-item`}>
         <a href=''>
-            <svg viewBox={`${icon.viewBox}`}>
-                <use xlinkHref={`#${icon.id}`} />
+            <svg className={`${CSS_PREFIX}icon`} viewBox={`${icon.viewBox}`}>
+                <use xlinkHref={`#${icon.id}`}/>
             </svg>
             <span>{text}</span>
         </a>

@@ -41,7 +41,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
         <section>
 
             <article className={`${CSS_PREFIX}general`}>
-                <img src='avatar.jpeg'></img>
+                <img className={`${CSS_PREFIX}avatar`} src='avatar.jpeg'></img>
                 <header>{name} {surname}</header>
                 {title}
                 <address>

@@ -1,1 +1,1 @@
-export const CSS_PREFIX = 'carl-';
+export const CSS_PREFIX = 'cv-';
