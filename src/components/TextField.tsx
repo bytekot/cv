@@ -10,7 +10,7 @@ const TextField = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
     <input
         type="text"
         placeholder={emptyText}
-        className={`${CSS_PREFIX}input`}
+        className={`${CSS_PREFIX}textfield`}
         onKeyUp={handler}
         // autoFocus
     />

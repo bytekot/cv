@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+
 import MenuItem from './MenuItem';
 import Job from './Job';
 import FilterField from './FilterField';
 import TagList from './TagList';
+
 import { CSS_PREFIX } from '../constants';
+import { downloadCV } from '../utils';
+
 import emailIcon from '../icons/email.svg';
 import telegramIcon from '../icons/telegram.svg';
 import gitHubIcon from '../icons/github.svg';
@@ -54,13 +58,14 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
                 <MenuItem text='Send me an email' icon={emailIcon}/>
                 <MenuItem text='Find me on Telegram' icon={telegramIcon}/>
                 <MenuItem text='Visit my GitHub' icon={gitHubIcon}/>
-                <MenuItem text='Download this CV' icon={downloadIcon}/>
+                <MenuItem text='Download this CV' icon={downloadIcon} handler={downloadCV}/>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
                 <header>Jobs</header>
                 { jobs.map(jobData =>
                     <Job
+                        key={jobData.company}
                         company={jobData.company}
                         title={jobData.title}
                         startDate={jobData.startDate}

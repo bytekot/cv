@@ -70,7 +70,9 @@ section {
 }
 
 .#{$prefix}general {
-    padding: 0 20px;
+    padding: 20px 0 20px 60px;
+    //padding: 20px 0;
+    //text-align: center;
 
     .#{$prefix}avatar {
         height: 100px;
@@ -103,12 +105,12 @@ section {
     }
 }
 
-.#{$prefix}input {
+.#{$prefix}textfield {
     display: block;
     height: 30px;
     width: 200px;
     border: none;
-    border-bottom: 1px #ddd solid;
+    border-bottom: 1px $color-3 solid;
     outline: none;
 }
 

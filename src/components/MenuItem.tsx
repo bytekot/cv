@@ -7,11 +7,12 @@ interface MenuItem {
         id: string
         viewBox: string
     }
+    handler?: () => void
 }
 
-const MenuItem = ({ text, icon }: MenuItem): JSX.Element =>
-    <div className={`${CSS_PREFIX}menu-item`}>
-        <a href=''>
+const MenuItem = ({ text, icon, handler }: MenuItem): JSX.Element =>
+    <div className={`${CSS_PREFIX}menu-item`} onClick={handler}>
+        <a>
             <svg className={`${CSS_PREFIX}icon`} viewBox={`${icon.viewBox}`}>
                 <use xlinkHref={`#${icon.id}`}/>
             </svg>
