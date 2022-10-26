@@ -2,11 +2,11 @@ import React from 'react';
 import { CSS_PREFIX } from '../constants';
 
 interface TextFieldProps {
-    handler?: (event: React.KeyboardEvent) => void,
-    emptyText?: string,
+    handler?: (event: React.KeyboardEvent) => void
+    emptyText?: string
 }
 
-const TextFieldView = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
+const TextField = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
     <input
         type="text"
         placeholder={emptyText}
@@ -15,4 +15,4 @@ const TextFieldView = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
         // autoFocus
     />
 
-export default TextFieldView;
+export default TextField;

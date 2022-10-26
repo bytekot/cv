@@ -2,15 +2,15 @@ import React from 'react';
 import { CSS_PREFIX } from '../constants';
 
 interface MenuItem {
-    text: string,
+    text: string
     icon: {
-        id: string,
-        viewBox: string,
-    },
+        id: string
+        viewBox: string
+    }
 }
 
 const MenuItem = ({ text, icon }: MenuItem): JSX.Element =>
-    <div className={`${CSS_PREFIX}card-elevated`} >
+    <div className={`${CSS_PREFIX}menu-item`} >
         <a href=''>
             <svg viewBox={`${icon.viewBox}`}>
                 <use xlinkHref={`#${icon.id}`} />

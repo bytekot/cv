@@ -1,4 +1,6 @@
-$PREFIX: 'carl-';
+$prefix: 'carl-';
+
+$color-link: #2286c3;
 
 body {
     background: #fafafa;
@@ -10,16 +12,6 @@ body {
     letter-spacing: 0.0178571em;
 }
 
-a {
-    color: #2286c3;
-}
-
-&.#{$PREFIX}card {
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-}
 header {
     font-size: 1.25rem;
     line-height: 2rem;
@@ -27,46 +19,8 @@ header {
     letter-spacing: 0.0125em;
 }
 
-&.#{$PREFIX}card-elevated {
-    opacity: 0.8;
-    padding: 5px 20px;
-    // background: #fff;
-    // //background-color: #fafafa;
-    // border-radius: 4px;
-    // box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    //     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    //     0px 1px 3px 0px rgba(0, 0, 0, .12);
-
-    margin-bottom: 10px;
-    //margin-top: 5px;
-
-    cursor: pointer;
-
-    svg {
-        vertical-align: middle;
-        fill: #2286c3;
-    }
-
-    a {
-        text-decoration: none;
-
-        span {
-            margin-left: 15px;
-            vertical-align: middle;
-            color: #2286c3;
-
-            border-radius: 1px solid #e0e0e0;
-
-            border-bottom: 1px solid #2286c3;
-        }
-    }
-
-    &:hover {
-        background-color: #eceff1;
-        // box-shadow: 0px 3px 1.2px -1.2px rgba(0, 0, 0, 0.22),
-        //     0px 1.2px 1.2px 0px rgba(0, 0, 0, 0.15),
-        //     0px 1.2px 4px 0px rgba(0, 0, 0, .13);
-    }
+a {
+    color: $color-link;
 }
 
 section {
@@ -82,48 +36,80 @@ section {
     padding: 30px 120px;
 
     article {
-
-        svg {
-            height: 25px;
-            width: 25px;
-        }
-
-        address {
-            opacity: 0.8;
-        }
-
-        &.#{$PREFIX}general {
+        &.#{$prefix}general {
             grid-area: general;
-
-            //height: 210px;
-
-            img {
-                height: 100px;
-                width: 100px;
-                border: 2px solid #fafafa;
-                border-radius: 100px;
-            }
         }
 
-        &.#{$PREFIX}additional {
+        &.#{$prefix}additional {
             grid-area: additional;
         }
 
-        &.#{$PREFIX}skills {
+        &.#{$prefix}skills {
             grid-area: skills;
         }
 
-        &.#{$PREFIX}jobs {
+        &.#{$prefix}jobs {
             grid-area: jobs;
         }
 
-        &.#{$PREFIX}education {
+        &.#{$prefix}education {
             grid-area: education;
         }
     }
 }
 
-.#{$PREFIX}input {
+.#{$prefix}card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.#{$prefix}general {
+    padding: 0 20px;
+
+    img {
+        height: 100px;
+        width: 100px;
+        border: 2px solid #fafafa;
+        border-radius: 100px;
+    }
+}
+
+.#{$prefix}menu-item {
+    padding: 5px 20px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    svg {
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+        fill: $color-link;
+    }
+
+    a {
+        text-decoration: none;
+
+        span {
+            margin-left: 15px;
+            vertical-align: middle;
+            color: $color-link;
+
+            border-radius: 1px solid #e0e0e0;
+
+            border-bottom: 1px solid $color-link;
+        }
+    }
+
+    &:hover {
+        background-color: #eceff1;
+    }
+}
+
+.#{$prefix}input {
     display: block;
     height: 30px;
     width: 200px;
@@ -132,7 +118,7 @@ section {
     outline: none;
 }
 
-.#{$PREFIX}tag {
+.#{$prefix}tag {
     display: inline-block;
 
     padding: 2px 6px;
@@ -144,11 +130,11 @@ section {
     text-align: center;
 }
 
-.#{$PREFIX}taglist {
+.#{$prefix}tag-list {
     display: inline-block;
     padding-left: 0;
 
-    .#{$PREFIX}tag {
+    .#{$prefix}tag {
         margin: 6px 6px 0 0;
     }
 }

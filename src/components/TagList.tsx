@@ -1,14 +1,14 @@
 import React from 'react';
 import { CSS_PREFIX } from '../constants';
-import TagView from './Tag';
+import Tag from './Tag';
 
 interface TagListProps {
     tags: string[]
 }
 
-const TagListView = ({ tags }: TagListProps): JSX.Element =>
-    <ul className={`${CSS_PREFIX}taglist`}>
-        {tags.map(tag => <TagView key={tag}>{tag}</TagView>)}
+const TagList = ({ tags }: TagListProps): JSX.Element =>
+    <ul className={`${CSS_PREFIX}tag-list`}>
+        { tags.map(tag => <Tag key={tag}>{tag}</Tag>) }
     </ul>
 
-export default TagListView;
+export default TagList;

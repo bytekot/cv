@@ -1,49 +1,46 @@
 import React, { useState } from 'react';
 import MenuItem from './MenuItem';
-import FilterFieldView from './FilterField';
-import TagListView from './TagList';
+import Job from './Job';
+import FilterField from './FilterField';
+import TagList from './TagList';
 import { CSS_PREFIX } from '../constants';
 import emailIcon from '../icons/email.svg';
 import telegramIcon from '../icons/telegram.svg';
 import gitHubIcon from '../icons/github.svg';
 import downloadIcon from '../icons/download.svg';
 
-interface CVData {
-    general: {
-        name: string,
-        surname: string,
-        title: string,
-        email: string,
-        country: string,
-        city: string,
-    },
-
-    skills: string[],
-
-    jobs: {
-        company: string,
-        title: string,
-        startDate: string,
-        endDate: string,
-        description: string,
-    }[],
-
-    education: {
-        university: string,
-        specialization: string,
-        startDate: string,
-        endDate: string,
-        degree: string,
-    },
+interface GeneralData {
+    name: string
+    surname: string
+    title: string
+    email: string
+    country: string
+    city: string
 }
 
-const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {
+interface EducationData {
+    university: string
+    specialization: string
+    startDate: string
+    endDate: string
+    degree: string
+}
+
+interface CVData {
+    general: GeneralData
+    skills: string[]
+    jobs: Job[]
+    education: EducationData
+}
+
+const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
     const { name, surname, title, email, country, city } = general;
     const [filteredSkills, setSkills] = useState(skills);
 
     return (
         <section>
-            <article className={`${CSS_PREFIX}card-elevated ${CSS_PREFIX}general`}>
+
+            <article className={`${CSS_PREFIX}general`}>
                 <img src='avatar.jpeg'></img>
                 <header>{name} {surname}</header>
                 {title}
@@ -55,27 +52,28 @@ const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {
 
             <article className={`${CSS_PREFIX}additional`}>
                 <MenuItem text='Send me an email' icon={emailIcon}/>
-                <MenuItem text='or write to Telegram.' icon={telegramIcon}/>
-                <MenuItem text='Visit my GitHub.' icon={gitHubIcon}/>
-                <MenuItem text='Download this CV.' icon={downloadIcon}/>
+                <MenuItem text='Find me on Telegram' icon={telegramIcon}/>
+                <MenuItem text='Visit my GitHub' icon={gitHubIcon}/>
+                <MenuItem text='Download this CV' icon={downloadIcon}/>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
                 <header>Jobs</header>
-                {jobs.map(jobData =>
-                    <div key={jobData.company}>
-                        <strong>{jobData.company}</strong><br/>
-                        {jobData.title}<br/>
-                        {jobData.startDate} — {jobData.endDate}
-                        <p>{jobData.description}</p>
-                    </div>
+                { jobs.map(jobData =>
+                    <Job
+                        company={jobData.company}
+                        title={jobData.title}
+                        startDate={jobData.startDate}
+                        endDate={jobData.endDate}
+                        description={jobData.description}
+                    />
                 )}
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}skills`}>
                 <header>Skills</header>
-                <FilterFieldView data={skills} callback={setSkills}/>
-                <TagListView tags={filteredSkills}/>
+                <FilterField data={skills} callback={setSkills}/>
+                <TagList tags={filteredSkills}/>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}education`}>
@@ -89,4 +87,4 @@ const CVView = ({ general, skills, jobs }: CVData): JSX.Element => {
     )
 };
 
-export default CVView;
+export default CV;
