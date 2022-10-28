@@ -13,31 +13,9 @@ import telegramIcon from '../icons/telegram.svg';
 import gitHubIcon from '../icons/github.svg';
 import downloadIcon from '../icons/download.svg';
 
-interface GeneralData {
-    name: string
-    surname: string
-    title: string
-    email: string
-    country: string
-    city: string
-}
+import { CVData } from '../types';
 
-interface EducationData {
-    university: string
-    specialization: string
-    startDate: string
-    endDate: string
-    degree: string
-}
-
-interface CVData {
-    general: GeneralData
-    skills: string[]
-    jobs: Job[]
-    education: EducationData
-}
-
-const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
+export default ({ general, skills, jobs }: CVData): JSX.Element => {
     const { name, surname, title, email, country, city } = general;
     const [filteredSkills, setSkills] = useState(skills);
 
@@ -45,20 +23,20 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
         <section>
 
             <article className={`${CSS_PREFIX}general`}>
-                <img className={`${CSS_PREFIX}avatar`} src='avatar.jpeg'></img>
-                <header>{name} {surname}</header>
-                {title}
-                <address>
+                <img className={`${CSS_PREFIX}avatar`} src='avatar.png'></img>
+                <header className={`${CSS_PREFIX}name`}>{name} {surname}</header>
+                <span className={`${CSS_PREFIX}title`}>{title}</span>
+                <address className={`${CSS_PREFIX}address`}>
                     <a href='mailto:'>{email}</a><br/>
                     {city}, {country}
                 </address>
             </article>
 
             <article className={`${CSS_PREFIX}additional`}>
-                <MenuItem text='Send me an email' icon={emailIcon}/>
-                <MenuItem text='Find me on Telegram' icon={telegramIcon}/>
-                <MenuItem text='Visit my GitHub' icon={gitHubIcon}/>
-                <MenuItem text='Download this CV' icon={downloadIcon} handler={downloadCV}/>
+                <MenuItem icon={emailIcon}>Send me an email</MenuItem>
+                <MenuItem icon={telegramIcon}>Find me on Telegram</MenuItem>
+                <MenuItem icon={gitHubIcon}>Visit my GitHub</MenuItem>
+                <MenuItem icon={downloadIcon} handler={downloadCV}>Download this CV</MenuItem>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
@@ -91,5 +69,3 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
         </section>
     )
 };
-
-export default CV;

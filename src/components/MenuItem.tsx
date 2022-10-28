@@ -2,7 +2,7 @@ import React from 'react';
 import { CSS_PREFIX } from '../constants';
 
 interface MenuItem {
-    text: string
+    children: string
     icon: {
         id: string
         viewBox: string
@@ -10,13 +10,13 @@ interface MenuItem {
     handler?: () => void
 }
 
-const MenuItem = ({ text, icon, handler }: MenuItem): JSX.Element =>
+const MenuItem = ({ children, icon, handler }: MenuItem): JSX.Element =>
     <div className={`${CSS_PREFIX}menu-item`} onClick={handler}>
         <a>
             <svg className={`${CSS_PREFIX}icon`} viewBox={`${icon.viewBox}`}>
                 <use xlinkHref={`#${icon.id}`}/>
             </svg>
-            <span>{text}</span>
+            <span>{children}</span>
         </a>
     </div>
 

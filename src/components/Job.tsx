@@ -1,15 +1,7 @@
 import React from 'react';
-import { CSS_PREFIX } from '../constants';
+import { JobData } from '../types';
 
-interface Job {
-    company: string
-    title: string
-    startDate: string
-    endDate: string
-    description: string
-}
-
-const Job = ({ company, title, startDate, endDate, description }: Job): JSX.Element =>
+const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.Element =>
     <div key={company}>
         <strong>{company}</strong><br />
         {title}<br />
