@@ -6,7 +6,7 @@ import FilterField from './FilterField';
 import TagList from './TagList';
 
 import { CSS_PREFIX } from '../constants';
-import { downloadCV } from '../utils';
+import { downloadCV, filterBy } from '../utils';
 
 import emailIcon from '../icons/email.svg';
 import telegramIcon from '../icons/telegram.svg';
@@ -55,7 +55,7 @@ export default ({ general, skills, jobs }: CVData): JSX.Element => {
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}skills`}>
                 <header>Skills</header>
-                <FilterField data={skills} callback={setSkills}/>
+                <FilterField data={skills} filterFn={filterBy} callback={setSkills}/>
                 <TagList tags={filteredSkills}/>
             </article>
 

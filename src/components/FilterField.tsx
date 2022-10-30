@@ -1,20 +1,19 @@
-import React from 'react';
-import TextField from './TextField';
+import React from 'react'
+import TextField from './TextField'
 
 interface FilterFieldProps {
-    data: string[]
-    callback: (filteredData: string[]) => void
+    data: any[]
+    filterFn: (data: any[], key: string) => any[]
+    callback?: (filteredData: any[]) => void
     emptyText?: string
 }
 
-const FilterField = ({ data, callback, emptyText = 'Filter' }: FilterFieldProps): JSX.Element => {
-    const handler = (event: React.KeyboardEvent): void => {
-        const value = (event.target as HTMLInputElement).value.toLowerCase();
+const FilterField = ({ data, filterFn, callback = () => {}, emptyText = 'Filter' }: FilterFieldProps): JSX.Element =>
+    <TextField
+        handler={(event: React.KeyboardEvent): void =>
+            callback(filterFn(data, (event.target as HTMLInputElement).value.toLowerCase()))
+        }
+        emptyText={emptyText}
+    />
 
-        callback(data.filter(item => item.toLowerCase().includes(value)));
-    };
-
-    return <TextField handler={handler} emptyText={emptyText} />;
-}
-
-export default FilterField;
+export default FilterField
