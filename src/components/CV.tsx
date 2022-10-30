@@ -15,7 +15,7 @@ import downloadIcon from '../icons/download.svg';
 
 import { CVData } from '../types';
 
-export default ({ general, skills, jobs }: CVData): JSX.Element => {
+const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
     const { name, surname, title, email, country, city } = general;
 
     const [ filteredSkills, setSkills ] = useState(skills);
@@ -73,3 +73,5 @@ export default ({ general, skills, jobs }: CVData): JSX.Element => {
         </section>
     )
 };
+
+export default CV
