@@ -1,5 +1,5 @@
-import React from 'react';
-import { CSS_PREFIX } from '../constants';
+import React from 'react'
+import { CSS_PREFIX } from '../constants'
 
 interface MenuItem {
     children: string
@@ -20,4 +20,4 @@ const MenuItem = ({ children, icon, handler }: MenuItem): JSX.Element =>
         </a>
     </div>
 
-export default MenuItem;
+export default MenuItem

@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import MenuItem from './MenuItem';
-import Job from './Job';
-import FilterField from './FilterField';
-import TagList from './TagList';
+import MenuItem from './MenuItem'
+import Job from './Job'
+import FilterField from './FilterField'
+import TagList from './TagList'
 
-import { CSS_PREFIX } from '../constants';
-import { printPage, filterBy } from '../utils';
+import { CSS_PREFIX } from '../constants'
+import { printPage, filterBy } from '../utils'
 
-import emailIcon from '../icons/email.svg';
-import telegramIcon from '../icons/telegram.svg';
-import gitHubIcon from '../icons/github.svg';
-import downloadIcon from '../icons/download.svg';
+import emailIcon from '../icons/email.svg'
+import telegramIcon from '../icons/telegram.svg'
+import gitHubIcon from '../icons/github.svg'
+import downloadIcon from '../icons/download.svg'
 
-import { CVData } from '../types';
+import { CVData } from '../types'
 
 const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
-    const { name, surname, title, email, country, city } = general;
+    const { name, surname, title, email, country, city } = general
 
-    const [ filteredSkills, setSkills ] = useState(skills);
+    const [ filteredSkills, setSkills ] = useState(skills)
     const [ printModeCls, setPrintMode ] = useState('')
 
     const print = () => { setPrintMode(`${CSS_PREFIX}print-mode`); setTimeout(printPage, 0) }
@@ -72,6 +72,6 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
 
         </section>
     )
-};
+}
 
 export default CV

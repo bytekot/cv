@@ -1,5 +1,5 @@
-import React from 'react';
-import { CSS_PREFIX } from '../constants';
+import React from 'react'
+import { CSS_PREFIX } from '../constants'
 
 interface TagProps {
     additionalCls?: string
@@ -11,4 +11,4 @@ const Tag = ({ additionalCls, children }: TagProps): JSX.Element =>
         {children}
     </li>
 
-export default Tag;
+export default Tag

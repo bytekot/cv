@@ -1,5 +1,5 @@
-import React from 'react';
-import { CSS_PREFIX } from '../constants';
+import React from 'react'
+import { CSS_PREFIX } from '../constants'
 
 interface TextFieldProps {
     handler?: (event: React.KeyboardEvent) => void
@@ -15,4 +15,4 @@ const TextField = ({ handler, emptyText }: TextFieldProps): JSX.Element =>
         // autoFocus
     />
 
-export default TextField;
+export default TextField

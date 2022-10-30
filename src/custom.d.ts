@@ -3,7 +3,7 @@ declare module '*.svg' {
         id: string
         viewBox: string
         content: string
-    };
+    }
 
-    export default svg;
+    export default svg
 }
