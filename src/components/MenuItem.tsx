@@ -11,7 +11,7 @@ interface MenuItem {
 }
 
 const MenuItem = ({ children, icon, handler }: MenuItem): JSX.Element =>
-    <div className={`${CSS_PREFIX}menu-item`} onClick={handler}>
+    <div className={`${CSS_PREFIX}menu-item ${icon.id}`} onClick={handler}>
         <a>
             <svg className={`${CSS_PREFIX}icon`} viewBox={`${icon.viewBox}`}>
                 <use xlinkHref={`#${icon.id}`}/>

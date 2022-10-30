@@ -6,7 +6,7 @@ import FilterField from './FilterField';
 import TagList from './TagList';
 
 import { CSS_PREFIX } from '../constants';
-import { downloadCV, filterBy } from '../utils';
+import { printPage, filterBy } from '../utils';
 
 import emailIcon from '../icons/email.svg';
 import telegramIcon from '../icons/telegram.svg';
@@ -17,10 +17,14 @@ import { CVData } from '../types';
 
 export default ({ general, skills, jobs }: CVData): JSX.Element => {
     const { name, surname, title, email, country, city } = general;
-    const [filteredSkills, setSkills] = useState(skills);
+
+    const [ filteredSkills, setSkills ] = useState(skills);
+    const [ printModeCls, setPrintMode ] = useState('')
+
+    const print = () => { setPrintMode(`${CSS_PREFIX}print-mode`); setTimeout(printPage, 0) }
 
     return (
-        <section>
+        <section className={`${CSS_PREFIX}container ${printModeCls}`}>
 
             <article className={`${CSS_PREFIX}general`}>
                 <img className={`${CSS_PREFIX}avatar`} src='avatar.png'></img>
@@ -36,7 +40,7 @@ export default ({ general, skills, jobs }: CVData): JSX.Element => {
                 <MenuItem icon={emailIcon}>Send me an email</MenuItem>
                 <MenuItem icon={telegramIcon}>Find me on Telegram</MenuItem>
                 <MenuItem icon={gitHubIcon}>Visit my GitHub</MenuItem>
-                <MenuItem icon={downloadIcon} handler={downloadCV}>Download this CV</MenuItem>
+                <MenuItem icon={downloadIcon} handler={print}>Download this CV</MenuItem>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
