@@ -71,6 +71,10 @@ section {
     background: $color-0;
     border: 1px solid $color-3;
     border-radius: 4px;
+
+    header {
+        //padding-bottom: 10px;
+    }
 }
 
 .#{$prefix}general {
@@ -87,6 +91,14 @@ section {
     }
     .#{$prefix}address {
         padding-left: 15px;
+    }
+}
+
+.#{$prefix}job {
+    padding: 15px 0 10px 0;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $color-2;
     }
 }
 
