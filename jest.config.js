@@ -1,5 +1,7 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 
-module.exports = {
+const module = {
   preset: 'ts-jest',
 }
+
+export default module
