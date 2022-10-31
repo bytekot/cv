@@ -8,11 +8,11 @@ const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.
         <strong>{company}</strong><br/>
         {title}<br/>
         ({startDate} — {endDate})
-        {description.map(paragraph => {
+        {description.map((paragraph, index) => {
             if (typeof paragraph === 'object') {
-                return <ul>{paragraph.map(item => <li>{item}</li>)}</ul>
+                return <ul key={index}>{paragraph.map((item, index) => <li key={index}>{item}</li>)}</ul>
             }
-            return <p>{paragraph}</p>
+            return <p key={index}>{paragraph}</p>
         })}
     </div>
 
