@@ -44,21 +44,41 @@
             "title": "Frontend Developer",
             "startDate": "08.2022",
             "endDate": "Present",
-            "description": "- Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support).\n- Participation in the development of a new product design."
+            "description": []
         },
         {
             "company": "Criterion Inc.",
             "title": "Frontend Developer",
             "startDate": "03.2021",
             "endDate": "03.2022",
-            "description": "- Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support).\n- Participation in the development of a new product design."
+            "description": [
+                [
+                    "Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support).",
+                    "Participation in the development of a new product design."
+                ]
+            ]
         },
         {
             "company": "Scalr Inc.",
             "title": "Frontend Developer",
             "startDate": "10.2013",
             "endDate": "07.2020",
-            "description": "as Frontend Developer (2013 - 2020)\n- Developing frontend for the hybrid cloud management platform with ExtJS and native JS.\n- A little bit of backend development.\n- Making code reviews.\n- Working within a separate frontend-team according to Kanban methodology as well as in cross-functional teams working in accordance with Agile.\nas UX Designer (2019 - 2020)\n- Reforming technical processes and design process workflow, implementation of controllable stages in design process, extending a design toolkit.\n- Mentoring and supervisory of a graphic designer's work (forming his tasks pool; planning; reviews). - Design specifications development; creating guides for developers.\n- Creating mockups and prototypes.\n- Product audience analysis — investigating user goals and preferences."
+            "description": [
+                "as Frontend Developer (2013 - 2020)",
+                [
+                    "Developing frontend for the hybrid cloud management platform with ExtJS and native JS.",
+                    "A little bit of backend development.",
+                    "Working within a separate frontend-team according to Kanban methodology as well as in cross-functional teams working in accordance with Agile."
+                ],
+                "as UX Designer (2019 - 2020)",
+                [
+                    "Reforming technical processes and design process workflow, implementation of controllable stages in design process, extending a design toolkit.",
+                    "Mentoring and supervisory of a graphic designer's work (forming his tasks pool; planning; reviews).",
+                    "Design specifications development; creating guides for developers.",
+                    "Creating mockups and prototypes.",
+                    "Product audience analysis — investigating user goals and preferences."
+                ]
+            ]
         }
     ]
 }
