@@ -15,8 +15,11 @@ export default {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
+                loader: 'esbuild-loader',
                 exclude: /node_modules/,
+                options: {
+                    loader: 'tsx',
+                },
             },
             {
                 test: /\.scss$/i,
@@ -35,7 +38,6 @@ export default {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'CV',
-            //template: './src/template.html',
         }),
     ],
 }

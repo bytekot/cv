@@ -42,6 +42,116 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 
 /***/ }),
 
+/***/ "./src/app.tsx":
+/*!*********************!*\
+  !*** ./src/app.tsx ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _components_CV__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/CV */ \"./src/components/CV.tsx\");\n/* harmony import */ var _config_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./config.json */ \"./src/config.json\");\n/* harmony import */ var _theme_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.scss */ \"./src/theme.scss\");\n\n\n\n\n\n\nconst container = document.body.appendChild(document.createElement(\"main\"));\n(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container).render(\n  /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_CV__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    general: _config_json__WEBPACK_IMPORTED_MODULE_3__.general,\n    skills: _config_json__WEBPACK_IMPORTED_MODULE_3__.skills,\n    jobs: _config_json__WEBPACK_IMPORTED_MODULE_3__.jobs,\n    education: _config_json__WEBPACK_IMPORTED_MODULE_3__.education\n  })\n);\n\n\n//# sourceURL=webpack://cv/./src/app.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/CV.tsx":
+/*!*******************************!*\
+  !*** ./src/components/CV.tsx ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MenuItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MenuItem */ \"./src/components/MenuItem.tsx\");\n/* harmony import */ var _Job__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Job */ \"./src/components/Job.tsx\");\n/* harmony import */ var _FilterField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FilterField */ \"./src/components/FilterField.tsx\");\n/* harmony import */ var _TagList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TagList */ \"./src/components/TagList.tsx\");\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils */ \"./src/utils.ts\");\n/* harmony import */ var _icons_email_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../icons/email.svg */ \"./src/icons/email.svg\");\n/* harmony import */ var _icons_telegram_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../icons/telegram.svg */ \"./src/icons/telegram.svg\");\n/* harmony import */ var _icons_github_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../icons/github.svg */ \"./src/icons/github.svg\");\n/* harmony import */ var _icons_download_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../icons/download.svg */ \"./src/icons/download.svg\");\n\n\n\n\n\n\n\n\n\n\n\n\nconst CV = ({ general, skills, jobs }) => {\n  const { name, surname, title, email, country, city } = general;\n  const [filteredSkills, setSkills] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(skills);\n  const [printModeCls, setPrintMode] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(\"\");\n  const print = () => {\n    setPrintMode(`${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}print-mode`);\n    setTimeout(_utils__WEBPACK_IMPORTED_MODULE_6__.printPage, 0);\n  };\n  return /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"section\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}container ${printModeCls}`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}general`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}avatar`,\n    src: \"avatar.png\"\n  }), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"header\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}name`\n  }, name, \" \", surname), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}title`\n  }, title), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"address\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}address`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"mailto:\"\n  }, email), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), city, \", \", country)), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}additional`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_MenuItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    icon: _icons_email_svg__WEBPACK_IMPORTED_MODULE_7__[\"default\"]\n  }, \"Send me an email\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_MenuItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    icon: _icons_telegram_svg__WEBPACK_IMPORTED_MODULE_8__[\"default\"]\n  }, \"Find me on Telegram\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_MenuItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    icon: _icons_github_svg__WEBPACK_IMPORTED_MODULE_9__[\"default\"]\n  }, \"Visit my GitHub\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_MenuItem__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    icon: _icons_download_svg__WEBPACK_IMPORTED_MODULE_10__[\"default\"],\n    handler: print\n  }, \"Download this CV\")), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}card ${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}jobs`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"header\", null, \"Jobs\"), jobs.map(\n    (jobData) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Job__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n      key: jobData.company,\n      company: jobData.company,\n      title: jobData.title,\n      startDate: jobData.startDate,\n      endDate: jobData.endDate,\n      description: jobData.description\n    })\n  )), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}card ${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}skills`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"header\", null, \"Skills\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_FilterField__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    data: skills,\n    filterFn: _utils__WEBPACK_IMPORTED_MODULE_6__.filterBy,\n    callback: setSkills\n  }), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TagList__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    tags: filteredSkills\n  })), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"article\", {\n    className: `${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}card ${_constants__WEBPACK_IMPORTED_MODULE_5__.CSS_PREFIX}education`\n  }, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"header\", null, \"Education\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"strong\", null, \"Sevastopol National Technical University\"), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), \"Informatics and Computer Engineering\", /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), \"2012\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CV);\n\n\n//# sourceURL=webpack://cv/./src/components/CV.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/FilterField.tsx":
+/*!****************************************!*\
+  !*** ./src/components/FilterField.tsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _TextField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextField */ \"./src/components/TextField.tsx\");\n\n\n\nconst FilterField = ({ data, filterFn, callback = () => {\n}, emptyText = \"Filter\" }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TextField__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n  handler: (event) => callback(filterFn(data, event.target.value.toLowerCase())),\n  emptyText\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FilterField);\n\n\n//# sourceURL=webpack://cv/./src/components/FilterField.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Job.tsx":
+/*!********************************!*\
+  !*** ./src/components/Job.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n\n\n\nconst Job = ({ company, title, startDate, endDate, description }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}job`,\n  key: company\n}, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"strong\", null, company), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), title, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"br\", null), \"(\", startDate, \" \\u2014 \", endDate, \")\", description.map((paragraph) => {\n  if (typeof paragraph === \"object\") {\n    return /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"ul\", null, paragraph.map((item) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", null, item)));\n  }\n  return /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, paragraph);\n}));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Job);\n\n\n//# sourceURL=webpack://cv/./src/components/Job.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/MenuItem.tsx":
+/*!*************************************!*\
+  !*** ./src/components/MenuItem.tsx ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n\n\n\nconst MenuItem = ({ children, icon, handler }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}menu-item ${icon.id}`,\n  onClick: handler\n}, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", null, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"svg\", {\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}icon`,\n  viewBox: `${icon.viewBox}`\n}, /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"use\", {\n  xlinkHref: `#${icon.id}`\n})), /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", null, children)));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MenuItem);\n\n\n//# sourceURL=webpack://cv/./src/components/MenuItem.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Tag.tsx":
+/*!********************************!*\
+  !*** ./src/components/Tag.tsx ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n\n\n\nconst Tag = ({ additionalCls, children }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", {\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}tag ${additionalCls}`\n}, children);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tag);\n\n\n//# sourceURL=webpack://cv/./src/components/Tag.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TagList.tsx":
+/*!************************************!*\
+  !*** ./src/components/TagList.tsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n/* harmony import */ var _Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tag */ \"./src/components/Tag.tsx\");\n\n\n\n\nconst TagList = ({ tags }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"ul\", {\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}tag-list`\n}, tags.map((tag) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Tag__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n  key: tag\n}, tag)));\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TagList);\n\n\n//# sourceURL=webpack://cv/./src/components/TagList.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TextField.tsx":
+/*!**************************************!*\
+  !*** ./src/components/TextField.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\n\n\n\nconst TextField = ({ handler, emptyText }) => /* @__PURE__ */ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"input\", {\n  type: \"text\",\n  placeholder: emptyText,\n  className: `${_constants__WEBPACK_IMPORTED_MODULE_1__.CSS_PREFIX}textfield`,\n  onKeyUp: handler\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TextField);\n\n\n//# sourceURL=webpack://cv/./src/components/TextField.tsx?");
+
+/***/ }),
+
+/***/ "./src/constants.ts":
+/*!**************************!*\
+  !*** ./src/constants.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"CSS_PREFIX\": () => (/* binding */ CSS_PREFIX)\n/* harmony export */ });\n\nconst CSS_PREFIX = \"cv-\";\n\n\n//# sourceURL=webpack://cv/./src/constants.ts?");
+
+/***/ }),
+
+/***/ "./src/utils.ts":
+/*!**********************!*\
+  !*** ./src/utils.ts ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"filterBy\": () => (/* binding */ filterBy),\n/* harmony export */   \"printPage\": () => (/* binding */ printPage)\n/* harmony export */ });\n\nconst printPage = () => window.print();\nconst filterBy = (data, key) => data.filter((item) => item.toLowerCase().includes(key));\n\n\n//# sourceURL=webpack://cv/./src/utils.ts?");
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -260,116 +370,6 @@ eval("(function (global, factory) {\n\t true ? module.exports = factory() :\n\t0
 
 /***/ }),
 
-/***/ "./src/app.tsx":
-/*!*********************!*\
-  !*** ./src/app.tsx ***!
-  \*********************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar CV_1 = __importDefault(__webpack_require__(/*! ./components/CV */ \"./src/components/CV.tsx\"));\nvar config_json_1 = __webpack_require__(/*! ./config.json */ \"./src/config.json\");\n__webpack_require__(/*! ./theme.scss */ \"./src/theme.scss\");\nvar container = document.body.appendChild(document.createElement('main'));\n(0, client_1.createRoot)(container).render(react_1.default.createElement(CV_1.default, { general: config_json_1.general, skills: config_json_1.skills, jobs: config_json_1.jobs, education: config_json_1.education }));\n\n\n//# sourceURL=webpack://cv/./src/app.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/CV.tsx":
-/*!*******************************!*\
-  !*** ./src/components/CV.tsx ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    var desc = Object.getOwnPropertyDescriptor(m, k);\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\n      desc = { enumerable: true, get: function() { return m[k]; } };\n    }\n    Object.defineProperty(o, k2, desc);\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar MenuItem_1 = __importDefault(__webpack_require__(/*! ./MenuItem */ \"./src/components/MenuItem.tsx\"));\nvar Job_1 = __importDefault(__webpack_require__(/*! ./Job */ \"./src/components/Job.tsx\"));\nvar FilterField_1 = __importDefault(__webpack_require__(/*! ./FilterField */ \"./src/components/FilterField.tsx\"));\nvar TagList_1 = __importDefault(__webpack_require__(/*! ./TagList */ \"./src/components/TagList.tsx\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar utils_1 = __webpack_require__(/*! ../utils */ \"./src/utils.ts\");\nvar email_svg_1 = __importDefault(__webpack_require__(/*! ../icons/email.svg */ \"./src/icons/email.svg\"));\nvar telegram_svg_1 = __importDefault(__webpack_require__(/*! ../icons/telegram.svg */ \"./src/icons/telegram.svg\"));\nvar github_svg_1 = __importDefault(__webpack_require__(/*! ../icons/github.svg */ \"./src/icons/github.svg\"));\nvar download_svg_1 = __importDefault(__webpack_require__(/*! ../icons/download.svg */ \"./src/icons/download.svg\"));\nvar CV = function (_a) {\n    var general = _a.general, skills = _a.skills, jobs = _a.jobs;\n    var name = general.name, surname = general.surname, title = general.title, email = general.email, country = general.country, city = general.city;\n    var _b = (0, react_1.useState)(skills), filteredSkills = _b[0], setSkills = _b[1];\n    var _c = (0, react_1.useState)(''), printModeCls = _c[0], setPrintMode = _c[1];\n    var print = function () { setPrintMode(\"\".concat(constants_1.CSS_PREFIX, \"print-mode\")); setTimeout(utils_1.printPage, 0); };\n    return (react_1.default.createElement(\"section\", { className: \"\".concat(constants_1.CSS_PREFIX, \"container \").concat(printModeCls) },\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"general\") },\n            react_1.default.createElement(\"img\", { className: \"\".concat(constants_1.CSS_PREFIX, \"avatar\"), src: 'avatar.png' }),\n            react_1.default.createElement(\"header\", { className: \"\".concat(constants_1.CSS_PREFIX, \"name\") },\n                name,\n                \" \",\n                surname),\n            react_1.default.createElement(\"span\", { className: \"\".concat(constants_1.CSS_PREFIX, \"title\") }, title),\n            react_1.default.createElement(\"address\", { className: \"\".concat(constants_1.CSS_PREFIX, \"address\") },\n                react_1.default.createElement(\"a\", { href: 'mailto:' }, email),\n                react_1.default.createElement(\"br\", null),\n                city,\n                \", \",\n                country)),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"additional\") },\n            react_1.default.createElement(MenuItem_1.default, { icon: email_svg_1.default }, \"Send me an email\"),\n            react_1.default.createElement(MenuItem_1.default, { icon: telegram_svg_1.default }, \"Find me on Telegram\"),\n            react_1.default.createElement(MenuItem_1.default, { icon: github_svg_1.default }, \"Visit my GitHub\"),\n            react_1.default.createElement(MenuItem_1.default, { icon: download_svg_1.default, handler: print }, \"Download this CV\")),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"jobs\") },\n            react_1.default.createElement(\"header\", null, \"Jobs\"),\n            jobs.map(function (jobData) {\n                return react_1.default.createElement(Job_1.default, { key: jobData.company, company: jobData.company, title: jobData.title, startDate: jobData.startDate, endDate: jobData.endDate, description: jobData.description });\n            })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"skills\") },\n            react_1.default.createElement(\"header\", null, \"Skills\"),\n            react_1.default.createElement(FilterField_1.default, { data: skills, filterFn: utils_1.filterBy, callback: setSkills }),\n            react_1.default.createElement(TagList_1.default, { tags: filteredSkills })),\n        react_1.default.createElement(\"article\", { className: \"\".concat(constants_1.CSS_PREFIX, \"card \").concat(constants_1.CSS_PREFIX, \"education\") },\n            react_1.default.createElement(\"header\", null, \"Education\"),\n            react_1.default.createElement(\"strong\", null, \"Sevastopol National Technical University\"),\n            react_1.default.createElement(\"br\", null),\n            \"Informatics and Computer Engineering\",\n            react_1.default.createElement(\"br\", null),\n            \"2012\")));\n};\nexports[\"default\"] = CV;\n\n\n//# sourceURL=webpack://cv/./src/components/CV.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/FilterField.tsx":
-/*!****************************************!*\
-  !*** ./src/components/FilterField.tsx ***!
-  \****************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar TextField_1 = __importDefault(__webpack_require__(/*! ./TextField */ \"./src/components/TextField.tsx\"));\nvar FilterField = function (_a) {\n    var data = _a.data, filterFn = _a.filterFn, _b = _a.callback, callback = _b === void 0 ? function () { } : _b, _c = _a.emptyText, emptyText = _c === void 0 ? 'Filter' : _c;\n    return react_1.default.createElement(TextField_1.default, { handler: function (event) {\n            return callback(filterFn(data, event.target.value.toLowerCase()));\n        }, emptyText: emptyText });\n};\nexports[\"default\"] = FilterField;\n\n\n//# sourceURL=webpack://cv/./src/components/FilterField.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/Job.tsx":
-/*!********************************!*\
-  !*** ./src/components/Job.tsx ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar Job = function (_a) {\n    var company = _a.company, title = _a.title, startDate = _a.startDate, endDate = _a.endDate, description = _a.description;\n    return react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"job\"), key: company },\n        react_1.default.createElement(\"strong\", null, company),\n        react_1.default.createElement(\"br\", null),\n        title,\n        react_1.default.createElement(\"br\", null),\n        \"(\",\n        startDate,\n        \" \\u2014 \",\n        endDate,\n        \")\",\n        description.map(function (paragraph) {\n            if (typeof paragraph === 'object') {\n                return react_1.default.createElement(\"ul\", null, paragraph.map(function (item) { return react_1.default.createElement(\"li\", null, item); }));\n            }\n            return react_1.default.createElement(\"p\", null, paragraph);\n        }));\n};\nexports[\"default\"] = Job;\n\n\n//# sourceURL=webpack://cv/./src/components/Job.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/MenuItem.tsx":
-/*!*************************************!*\
-  !*** ./src/components/MenuItem.tsx ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar MenuItem = function (_a) {\n    var children = _a.children, icon = _a.icon, handler = _a.handler;\n    return react_1.default.createElement(\"div\", { className: \"\".concat(constants_1.CSS_PREFIX, \"menu-item \").concat(icon.id), onClick: handler },\n        react_1.default.createElement(\"a\", null,\n            react_1.default.createElement(\"svg\", { className: \"\".concat(constants_1.CSS_PREFIX, \"icon\"), viewBox: \"\".concat(icon.viewBox) },\n                react_1.default.createElement(\"use\", { xlinkHref: \"#\".concat(icon.id) })),\n            react_1.default.createElement(\"span\", null, children)));\n};\nexports[\"default\"] = MenuItem;\n\n\n//# sourceURL=webpack://cv/./src/components/MenuItem.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/Tag.tsx":
-/*!********************************!*\
-  !*** ./src/components/Tag.tsx ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar Tag = function (_a) {\n    var additionalCls = _a.additionalCls, children = _a.children;\n    return react_1.default.createElement(\"li\", { className: \"\".concat(constants_1.CSS_PREFIX, \"tag \").concat(additionalCls) }, children);\n};\nexports[\"default\"] = Tag;\n\n\n//# sourceURL=webpack://cv/./src/components/Tag.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/TagList.tsx":
-/*!************************************!*\
-  !*** ./src/components/TagList.tsx ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar Tag_1 = __importDefault(__webpack_require__(/*! ./Tag */ \"./src/components/Tag.tsx\"));\nvar TagList = function (_a) {\n    var tags = _a.tags;\n    return react_1.default.createElement(\"ul\", { className: \"\".concat(constants_1.CSS_PREFIX, \"tag-list\") }, tags.map(function (tag) { return react_1.default.createElement(Tag_1.default, { key: tag }, tag); }));\n};\nexports[\"default\"] = TagList;\n\n\n//# sourceURL=webpack://cv/./src/components/TagList.tsx?");
-
-/***/ }),
-
-/***/ "./src/components/TextField.tsx":
-/*!**************************************!*\
-  !*** ./src/components/TextField.tsx ***!
-  \**************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar constants_1 = __webpack_require__(/*! ../constants */ \"./src/constants.ts\");\nvar TextField = function (_a) {\n    var handler = _a.handler, emptyText = _a.emptyText;\n    return react_1.default.createElement(\"input\", { type: \"text\", placeholder: emptyText, className: \"\".concat(constants_1.CSS_PREFIX, \"textfield\"), onKeyUp: handler });\n};\nexports[\"default\"] = TextField;\n\n\n//# sourceURL=webpack://cv/./src/components/TextField.tsx?");
-
-/***/ }),
-
-/***/ "./src/constants.ts":
-/*!**************************!*\
-  !*** ./src/constants.ts ***!
-  \**************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.CSS_PREFIX = void 0;\nexports.CSS_PREFIX = 'cv-';\n\n\n//# sourceURL=webpack://cv/./src/constants.ts?");
-
-/***/ }),
-
-/***/ "./src/utils.ts":
-/*!**********************!*\
-  !*** ./src/utils.ts ***!
-  \**********************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.filterBy = exports.printPage = void 0;\nvar printPage = function () { return window.print(); };\nexports.printPage = printPage;\nvar filterBy = function (data, key) {\n    return data.filter(function (item) { return item.toLowerCase().includes(key); });\n};\nexports.filterBy = filterBy;\n\n\n//# sourceURL=webpack://cv/./src/utils.ts?");
-
-/***/ }),
-
 /***/ "./src/config.json":
 /*!*************************!*\
   !*** ./src/config.json ***!
@@ -481,7 +481,7 @@ eval("module.exports = JSON.parse('{\"general\":{\"name\":\"Sergey\",\"surname\"
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/app.tsx");
 /******/ 	
 /******/ })()
