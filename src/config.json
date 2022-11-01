@@ -42,15 +42,14 @@
         {
             "company": "DZ Systems",
             "title": "Frontend Developer",
-            "startDate": "08.2022",
-            "endDate": "Present",
+            "startDate": "2022-08",
             "description": []
         },
         {
             "company": "Criterion Inc.",
             "title": "Frontend Developer",
-            "startDate": "03.2021",
-            "endDate": "03.2022",
+            "startDate": "2021-03",
+            "endDate": "2022-03",
             "description": [
                 [
                     "Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support).",
@@ -61,8 +60,8 @@
         {
             "company": "Scalr Inc.",
             "title": "Frontend Developer",
-            "startDate": "10.2013",
-            "endDate": "07.2020",
+            "startDate": "2013-10",
+            "endDate": "2020-07",
             "description": [
                 "as Frontend Developer (2013 - 2020)",
                 [

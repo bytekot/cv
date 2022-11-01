@@ -37,7 +37,7 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'CV',
+            title: 'Sergey Kot\'s CV',
         }),
     ],
 }

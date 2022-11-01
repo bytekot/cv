@@ -4,9 +4,10 @@ import MenuItem from './MenuItem'
 import Job from './Job'
 import FilterField from './FilterField'
 import TagList from './TagList'
+import Label from './Label'
 
 import { CSS_PREFIX } from '../constants'
-import { printPage, filterBy } from '../utils'
+import { printPage, filterBy, getDateDiffText } from '../utils'
 
 import emailIcon from '../icons/email.svg'
 import telegramIcon from '../icons/telegram.svg'
@@ -16,12 +17,13 @@ import downloadIcon from '../icons/download.svg'
 import { CVData } from '../types'
 
 const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
-    const { name, surname, title, email, country, city } = general
-
     const [ filteredSkills, setSkills ] = useState(skills)
     const [ printModeCls, setPrintMode ] = useState('')
 
     const print = () => { setPrintMode(`${CSS_PREFIX}print-mode`); setTimeout(printPage, 0) }
+
+    const { name, surname, title, email, country, city } = general
+    const totalExperience = getDateDiffText(jobs[jobs.length - 1].startDate, jobs[0].endDate)
 
     return (
         <section className={`${CSS_PREFIX}container ${printModeCls}`}>
@@ -44,7 +46,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
-                <header>Jobs</header>
+                <header>Jobs<Label>{totalExperience}</Label></header>
                 { jobs.map(jobData =>
                     <Job
                         key={jobData.company}

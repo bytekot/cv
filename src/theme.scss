@@ -21,6 +21,8 @@ header {
     line-height: 2rem;
     font-weight: 500;
     letter-spacing: 0.0125em;
+
+    display: flex;
 }
 
 strong {
@@ -109,6 +111,17 @@ a {
     &:not(:last-child) {
         border-bottom: 1px solid $color-2;
     }
+
+    strong {
+        display: flex;
+
+        .#{$prefix}label {
+            opacity: 0.3;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+    }
 }
 
 .#{$prefix}menu-item {
@@ -159,6 +172,23 @@ a {
     padding-left: 0;
 
     .#{$prefix}tag {
-        margin: 6px 6px 0 0;
+        margin: 10px 10px 0 0;
     }
+}
+
+.#{$prefix}label {
+    display: inline-block;
+    margin-left: auto;
+    padding: 0 10px;
+    background-color: #7986cb;
+    color: $color-0;
+    border-radius: 100px;
+    border: 1px solid #7986cb;
+
+    height: 20px;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571em;
 }
