@@ -84,7 +84,7 @@ a {
     border-radius: 4px;
 
     header {
-        //padding-bottom: 10px;
+        padding-bottom: 15px;
     }
 }
 
@@ -106,21 +106,25 @@ a {
 }
 
 .#{$prefix}job {
-    padding: 15px 0 10px 0;
+    padding: 15px 0 15px 0;
+    border-top: 1px solid $color-2;
 
-    &:not(:last-child) {
-        border-bottom: 1px solid $color-2;
-    }
-
-    strong {
+    .#{$prefix}header-job {
         display: flex;
 
-        .#{$prefix}label {
-            opacity: 0.3;
-            background-color: #fff;
-            color: #000;
-            border: 1px solid #000;
+        h4 {
+            margin: 0;
         }
+
+        .#{$prefix}job-period {
+            margin-left: auto;
+            text-align: right;
+            opacity: 0.5;
+        }
+    }
+
+    ul {
+        padding-left: 20px;
     }
 }
 

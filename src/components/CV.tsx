@@ -4,7 +4,6 @@ import MenuItem from './MenuItem'
 import Job from './Job'
 import FilterField from './FilterField'
 import TagList from './TagList'
-import Label from './Label'
 
 import { CSS_PREFIX } from '../constants'
 import { printPage, filterBy, getPeriodText } from '../utils'
@@ -46,7 +45,10 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
-                <header>Jobs<Label>{totalExperience}</Label></header>
+                <header>
+                    <span>Jobs</span>
+                    <div className={`${CSS_PREFIX}label`}>{totalExperience}</div>
+                </header>
                 { jobs.map(jobData =>
                     <Job
                         key={jobData.company}

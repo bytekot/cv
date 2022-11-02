@@ -1,4 +1,4 @@
-import { filterBy, getPeriodText } from '../src/utils'
+import { filterBy, getPeriodText, beautifyDate } from '../src/utils'
 
 test('Test filterBy()', () => {
     expect(
@@ -27,4 +27,11 @@ test('Test getPeriodText()', () => {
         getPeriodText('2010-01', '2010-02')
     )
     .toBe('1 month')
+})
+
+test('Test beautifyDate()', () => {
+    expect(
+        beautifyDate('2022-11')
+    )
+    .toBe('November 2022')
 })

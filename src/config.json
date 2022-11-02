@@ -43,7 +43,12 @@
             "company": "DZ Systems",
             "title": "Frontend Developer",
             "startDate": "2022-08",
-            "description": []
+            "description": [
+                [
+                    "Developing web and mobile applications for the HCM platform and it modules using ExtJS with MVC/MVVM architecture and native JS (feature development, bug fixes and legacy code support).",
+                    "Participation in the development of a new product design."
+                ]
+            ]
         },
         {
             "company": "Criterion Inc.",

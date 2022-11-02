@@ -1,22 +1,20 @@
 import React from 'react'
 
 import { CSS_PREFIX } from '../constants'
-import { getPeriodText } from '../utils'
+import { beautifyDate } from '../utils'
 import { JobData } from '../types'
 
-import Label from './Label'
-
 const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.Element =>
-
     <div className={`${CSS_PREFIX}job`} key={company}>
-        <strong>
-            {company}
-            <Label>
-                {getPeriodText(startDate, endDate)}
-            </Label>
-        </strong><br/>
-        <span>{title}</span><br/>
-        ({startDate} — {endDate})
+        <div className={`${CSS_PREFIX}header-job`}>
+            <div>
+                <h4>{company}</h4>
+                <span>{title}</span><br />
+            </div>
+            <div className={`${CSS_PREFIX}job-period`}>
+                <span>{beautifyDate(startDate)} — {endDate ? beautifyDate(endDate) : 'Present'}</span>
+            </div>
+        </div>
         {description.map((paragraph, index) => {
             if (typeof paragraph === 'object') {
                 return <ul key={index}>{paragraph.map((item, index) => <li key={index}>{item}</li>)}</ul>
