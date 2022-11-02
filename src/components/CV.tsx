@@ -7,7 +7,7 @@ import TagList from './TagList'
 import Label from './Label'
 
 import { CSS_PREFIX } from '../constants'
-import { printPage, filterBy, getDateDiffText } from '../utils'
+import { printPage, filterBy, getPeriodText } from '../utils'
 
 import emailIcon from '../icons/email.svg'
 import telegramIcon from '../icons/telegram.svg'
@@ -23,7 +23,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
     const print = () => { setPrintMode(`${CSS_PREFIX}print-mode`); setTimeout(printPage, 0) }
 
     const { name, surname, title, email, country, city } = general
-    const totalExperience = getDateDiffText(jobs[jobs.length - 1].startDate, jobs[0].endDate)
+    const totalExperience = getPeriodText(jobs[jobs.length - 1].startDate, jobs[0].endDate)
 
     return (
         <section className={`${CSS_PREFIX}container ${printModeCls}`}>

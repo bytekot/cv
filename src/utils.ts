@@ -1,23 +1,16 @@
-export const printPage = () => window.print()
+export const printPage = (): void => window.print()
 
 export const filterBy = (data: string[], key: string): string[] =>
     data.filter(item => item.toLowerCase().includes(key))
 
-export const getDateDiffText = (startDate: string, endDate: string): string => {
-    const msDiff = (endDate ? new Date(endDate) : new Date()).getTime() - new Date(startDate).getTime()
-    const monthsDiff = Math.trunc(msDiff / 2628000000)
+export const getPeriodText = (startDate: string, endDate?: string): string => {
+    const diffMs = (endDate ? new Date(endDate) : new Date()).getTime() - new Date(startDate).getTime()
+    const diffMonths = Math.trunc(diffMs / 2628000000)
 
-    const years = Math.trunc(monthsDiff / 12)
-    const months = monthsDiff % 12
+    const years = Math.trunc(diffMonths / 12)
+    const months = diffMonths % 12
 
-    return `
-        ${years
-            ? `${years} year${years > 1 ? 's ' : ' '}`
-            : ''
-        }
-        ${months
-            ? `${months} month${months > 1 ? 's' : ''}`
-            : ''
-        }
-    `
+    const getText = (period: string, count: number): string => `${count} ${period}${count > 1 ? 's' : ''}`
+
+    return `${years ? getText('year', years) : ''}${years && months ? ' ' : ''}${months ? getText('month', months) : ''}`
 }

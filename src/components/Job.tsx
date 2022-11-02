@@ -1,13 +1,20 @@
 import React from 'react'
 
 import { CSS_PREFIX } from '../constants'
+import { getPeriodText } from '../utils'
 import { JobData } from '../types'
-import Label from './Label'
-import { getDateDiffText } from '../utils'
 
-const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.Element => {
-    return (<div className={`${CSS_PREFIX}job`} key={company}>
-        <strong>{company}<Label>{getDateDiffText(startDate, endDate)}</Label></strong><br/>
+import Label from './Label'
+
+const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.Element =>
+
+    <div className={`${CSS_PREFIX}job`} key={company}>
+        <strong>
+            {company}
+            <Label>
+                {getPeriodText(startDate, endDate)}
+            </Label>
+        </strong><br/>
         <span>{title}</span><br/>
         ({startDate} — {endDate})
         {description.map((paragraph, index) => {
@@ -16,7 +23,6 @@ const Job = ({ company, title, startDate, endDate, description }: JobData): JSX.
             }
             return <p key={index}>{paragraph}</p>
         })}
-    </div>)
-}
+    </div>
 
 export default Job
