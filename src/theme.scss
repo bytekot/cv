@@ -5,9 +5,11 @@ $color-1: #fafafa;
 $color-2: #eceff1;
 $color-3: #e0e0e0;
 $color-link: #2286c3;
+$color-label: #7986cb;
 
 body {
     background: $color-1;
+    margin: 0;
 
     font-family: Roboto, sans-serif;
     font-size: 0.875rem;
@@ -36,7 +38,7 @@ a {
 .#{$prefix}container {
     display: grid;
     grid-template-columns: 200px 1fr 0.6fr;
-    //grid-template-rows: 0.7fr 0.5fr 1.8fr;
+    grid-template-rows: auto 1fr 2fr;
     grid-template-areas:
         "general jobs skills"
         "additional jobs skills"
@@ -134,8 +136,8 @@ a {
     cursor: pointer;
 
     .#{$prefix}icon {
-        height: 25px;
-        width: 25px;
+        height: 28px;
+        width: 28px;
         vertical-align: middle;
         fill: $color-link;
     }
@@ -149,16 +151,37 @@ a {
             color: $color-link;
             border-bottom: 1px solid $color-link;
         }
+
+        &:hover {
+            span {
+                border-bottom: none;
+            }
+        }
     }
 }
 
 .#{$prefix}textfield {
     display: block;
     height: 30px;
-    width: 200px;
+    width: 270px;
     border: none;
     border-bottom: 1px $color-3 solid;
     outline: none;
+
+    border: 1px $color-3 solid;
+    border-radius: 4px;
+    padding: 0 10px;
+
+    background-color: $color-1;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571em;
+
+    &:focus {
+        background-color: $color-0;
+    }
 }
 
 .#{$prefix}tag {
@@ -184,15 +207,71 @@ a {
     display: inline-block;
     margin-left: auto;
     padding: 0 10px;
-    background-color: #7986cb;
+    background-color: $color-label;
     color: $color-0;
     border-radius: 100px;
-    border: 1px solid #7986cb;
-
+    border: 1px solid $color-label;
     height: 20px;
 
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.0178571em;
+}
+
+
+.#{$prefix}dark-theme {
+    $color-0: #1e1e1e;
+    $color-1: #282828;
+    $color-2: #333;
+    $color-3: #444;
+    $color-link: #2286c3;
+    $color-label: #7986cb;
+
+    background: $color-1;
+    color: #a5a5a5;
+    header { color: #e2e2e2; }
+
+    .#{$prefix}card {
+        background: $color-0;
+        border: 1px solid $color-3;
+    }
+
+    .#{$prefix}job {
+        border-top: 1px solid $color-2;
+    }
+
+    .#{$prefix}menu-item {
+        .#{$prefix}icon {
+            fill: $color-link;
+        }
+
+        a {
+            span {
+                color: $color-link;
+                border-bottom: 1px solid $color-link;
+            }
+        }
+    }
+
+    .#{$prefix}textfield {
+            border-bottom: 1px $color-3 solid;
+            border: 1px $color-3 solid;
+            background-color: $color-1;
+    
+            &:focus {
+                background-color: $color-0;
+            }
+        }
+
+    .#{$prefix}tag {
+        background-color: $color-2;
+        border: 1px solid $color-3;
+    }
+
+    .#{$prefix}label {
+        background-color: $color-label;
+        color: $color-0;
+        border: 1px solid $color-label;
+    }
 }

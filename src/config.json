@@ -22,10 +22,12 @@
         "JavaScript",
         "TypeScript",
         "React",
+        "MobX",
         "ExtJS",
-        "UI/UX Design",
         "CSS Modules",
         "SCSS",
+        "UI/UX Design",
+        "Interaction Design",
         "Webpack",
         "ESBuild",
         "Jest",
@@ -68,13 +70,13 @@
             "startDate": "2013-10",
             "endDate": "2020-07",
             "description": [
-                "as Frontend Developer (2013 - 2020)",
+                "as Frontend Developer (2013—2020)",
                 [
                     "Developing frontend for the hybrid cloud management platform with ExtJS and native JS.",
                     "A little bit of backend development.",
                     "Working within a separate frontend-team according to Kanban methodology as well as in cross-functional teams working in accordance with Agile."
                 ],
-                "as UX Designer (2019 - 2020)",
+                "as UX Designer (2019—2020)",
                 [
                     "Reforming technical processes and design process workflow, implementation of controllable stages in design process, extending a design toolkit.",
                     "Mentoring and supervisory of a graphic designer's work (forming his tasks pool; planning; reviews).",

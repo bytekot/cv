@@ -41,7 +41,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
                 <MenuItem icon={emailIcon}>Send me an email</MenuItem>
                 <MenuItem icon={telegramIcon}>Find me on Telegram</MenuItem>
                 <MenuItem icon={gitHubIcon}>Visit my GitHub</MenuItem>
-                <MenuItem icon={downloadIcon} handler={print}>Download this CV</MenuItem>
+                <MenuItem icon={downloadIcon} handler={print}>Download PDF</MenuItem>
             </article>
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>

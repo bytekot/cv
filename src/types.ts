@@ -26,3 +26,10 @@ export type CVData = {
     jobs: JobData[]
     education: EducationData
 }
+
+declare global {
+    interface Window {
+        toggleDarkMode: () => boolean
+    }
+}
+export {}
