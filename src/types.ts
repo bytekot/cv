@@ -10,7 +10,7 @@ export type JobData = {
     company: string
     title: string
     startDate: string
-    endDate: string
+    endDate?: string
     description: (string | string[])[]
 }
 export type EducationData = {
