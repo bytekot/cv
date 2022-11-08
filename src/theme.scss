@@ -143,18 +143,16 @@ a {
     }
 
     a {
-        text-decoration: none;
-
         span {
+            padding: 1px 0;
             margin-left: 15px;
             vertical-align: middle;
             color: $color-link;
-            border-bottom: 1px solid $color-link;
         }
 
         &:hover {
             span {
-                border-bottom: none;
+                border-bottom: 1.5px solid $color-link;
             }
         }
     }
@@ -225,12 +223,17 @@ a {
     $color-1: #282828;
     $color-2: #333;
     $color-3: #444;
-    $color-link: #2286c3;
-    $color-label: #7986cb;
+    $color-link: #58a6ff;
+    $color-label: #bb85fc;
 
     background: $color-1;
-    color: #a5a5a5;
-    header { color: #e2e2e2; }
+    color: #a5a5a5; //c9d1d9
+    header {
+        color: #e2e2e2;
+    }
+    a {
+        color: $color-link;
+    }
 
     .#{$prefix}card {
         background: $color-0;
@@ -249,8 +252,13 @@ a {
         a {
             span {
                 color: $color-link;
-                border-bottom: 1px solid $color-link;
             }
+
+            &:hover {
+            span {
+                border-bottom: 1.5px solid $color-link;
+            }
+        }
         }
     }
 

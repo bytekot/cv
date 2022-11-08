@@ -29,7 +29,9 @@ export type CVData = {
 
 declare global {
     interface Window {
-        toggleDarkMode: () => boolean
+        cv: {
+            toggleDarkTheme: () => boolean
+        }
     }
 }
 export {}
