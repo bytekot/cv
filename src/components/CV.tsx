@@ -6,7 +6,7 @@ import FilterField from './FilterField'
 import TagList from './TagList'
 
 import { CSS_PREFIX } from '../constants'
-import { printPage, filterBy, getPeriodText } from '../utils'
+import { printPage, filterBy, getPeriodText, getTotalPeriod } from '../utils'
 
 import emailIcon from '../icons/email.svg'
 import telegramIcon from '../icons/telegram.svg'
@@ -21,8 +21,11 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
 
     const print = () => { setPrintMode(`${CSS_PREFIX}print-mode`); setTimeout(printPage, 0) }
 
+    const totalExperience = getPeriodText(getTotalPeriod(
+        jobs.map(job => ({ startDate: job.startDate, endDate: job.endDate }))
+    ))
+
     const { name, surname, title, email, country, city } = general
-    const totalExperience = getPeriodText(jobs[jobs.length - 1].startDate, jobs[0].endDate)
 
     return (
         <section className={`${CSS_PREFIX}container ${printModeCls}`}>
@@ -46,7 +49,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
 
             <article className={`${CSS_PREFIX}card ${CSS_PREFIX}jobs`}>
                 <header>
-                    <span>Jobs</span>
+                    <span>Employment History</span>
                     <div className={`${CSS_PREFIX}label`}>{totalExperience}</div>
                 </header>
                 { jobs.map(jobData =>

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "jest && webpack --watch"
+    "start": "webpack --watch"
   },
   "keywords": [],
   "author": "Sergey Kot",

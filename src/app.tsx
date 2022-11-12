@@ -1,6 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
+import { toggleDarkTheme } from './utils'
 import CV from './components/CV'
 import config from './config.json'
 import './theme.scss'
@@ -16,3 +17,7 @@ createRoot(container).render(
         education={education}
     />
 )
+
+window.cv = {
+    toggleDarkTheme: toggleDarkTheme
+}

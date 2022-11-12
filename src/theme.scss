@@ -45,7 +45,9 @@ a {
         ". jobs education";
     gap: 10px;
 
+    margin: auto;
     padding: 30px 120px;
+    max-width: 1250px;
 
     article {
         &.#{$prefix}general {
@@ -135,24 +137,25 @@ a {
     margin-bottom: 10px;
     cursor: pointer;
 
-    .#{$prefix}icon {
-        height: 28px;
-        width: 28px;
-        vertical-align: middle;
-        fill: $color-link;
-    }
-
     a {
+        .#{$prefix}icon {
+            height: 28px;
+            width: 28px;
+            vertical-align: middle;
+            fill: $color-link;
+        }
         span {
-            padding: 1px 0;
             margin-left: 15px;
             vertical-align: middle;
             color: $color-link;
         }
 
         &:hover {
+            .#{$prefix}icon {
+                opacity: 0.8;
+            }
             span {
-                border-bottom: 1.5px solid $color-link;
+                border-bottom: 1px solid $color-link;
             }
         }
     }

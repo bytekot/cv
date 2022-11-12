@@ -13,7 +13,7 @@ export const toggleDarkTheme = (enabled?: boolean): boolean => {
 }
 
 
-export const applySystemTheme = ():boolean => toggleDarkTheme(
+export const applySystemTheme = (): boolean => toggleDarkTheme(
     window.matchMedia('(prefers-color-scheme: dark)').matches
 )
 
@@ -37,17 +37,36 @@ export const beautifyDate = (date?: string): string => {
 }
 
 
-export const getPeriodText = (startDate: string, endDate?: string): string => {
-    const diffMs = (endDate ? new Date(endDate) : new Date()).getTime() - new Date(startDate).getTime()
-    const diffMonths = Math.trunc(diffMs / 2628000000)
-    const years = Math.trunc(diffMonths / 12)
-    const months = diffMonths % 12
-    const getText = (period: string, count: number): string => `${count} ${period}${count > 1 ? 's' : ''}`
+type Period = { years: number, months: number }
 
-    return `${years ? getText('year', years) : ''}${years && months ? ' ' : ''}${months ? getText('month', months) : ''}`
+const monthsToPeriod = (months: number): Period => {
+    const remainingMonths = months % 12
+
+    return {
+        years: (months - remainingMonths) / 12,
+        months: remainingMonths
+    }
 }
 
+export const getMonths = (startDate: string, endDate?: string): number => {
+    const diffMs = (endDate ? new Date(endDate) : new Date()).getTime() - new Date(startDate).getTime()
+    
+    return Math.trunc(diffMs / 2628000000)
+}
 
-window.cv = {
-    toggleDarkTheme: toggleDarkTheme
+export const getPeriod = (startDate: string, endDate?: string): Period => monthsToPeriod(getMonths(startDate, endDate))
+
+export const getTotalPeriod = (periods: { startDate: string, endDate?: string }[]): Period => monthsToPeriod(
+    periods.reduce((total, current): number => total + getMonths(current.startDate, current.endDate), 0)
+)
+
+export const getPeriodText = (period: Period): string => {
+    const { years, months } = period
+    const getText = (period: string, count: number): string => `${count} ${period}${count > 1 ? 's' : ''}`
+
+    return (`
+        ${years ? getText('year', years) : ''}
+        ${years && months ? ' ' : ''}
+        ${months ? getText('month', months) : ''}
+    `)
 }
