@@ -28,7 +28,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
     const { name, surname, title, email, country, city } = general
 
     return (
-        <section className={`${CSS_PREFIX}container ${printModeCls}`}>
+        <main className={`${CSS_PREFIX}container ${printModeCls}`}>
 
             <article className={`${CSS_PREFIX}general`}>
                 <img className={`${CSS_PREFIX}avatar`} src='avatar.png'></img>
@@ -77,7 +77,7 @@ const CV = ({ general, skills, jobs }: CVData): JSX.Element => {
                 2012
             </article>
 
-        </section>
+        </main>
     )
 }
 
